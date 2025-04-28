@@ -9,12 +9,15 @@ A self-hosted DevOps Monitoring Dashboard for real-time Docker container monitor
 - **Alerts**: Notifies when containers crash or exceed CPU/memory thresholds (stored in memory, optional email support).
 
 ## Prerequisites
-- Docker and Docker Compose installed.
-- Node.js and npm (for building the frontend).
+- Docker and Docker Compose installed
+- Node.js and npm installed (for building the frontend)
+- Python 3.9+ installed (for the FastAPI backend)
 
 ## Setup Instructions
 
-1. **Clone the Repository**
-   ```sh
-   git clone <repository-url>
-   cd docker-monitor-dashboard
+
+```bash
+git clone https://github.com/cnaser1990/docker-monitoring-app.git
+cd docker-monitor-app
+docker-compose up -d --build
+visit localhost:9090
