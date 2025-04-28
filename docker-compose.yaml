@@ -1,0 +1,17 @@
+version: '3'
+services:
+  app:
+    build: ./backend
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - "9090:8000"
+    environment:
+      - CPU_THRESHOLD=80
+      - MEMORY_THRESHOLD=80
+      - SMTP_HOST=smtp.example.com
+      - SMTP_PORT=587
+      - SMTP_USER=user@example.com
+      - SMTP_PASSWORD=password
+      - ALERT_EMAIL=alert@example.com
+      - DOCKER_HOST=unix:///var/run/docker.sock  # Optional, for external daemons
